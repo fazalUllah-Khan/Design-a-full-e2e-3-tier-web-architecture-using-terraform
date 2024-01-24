@@ -1,15 +1,15 @@
 # Design-a-full-e2e-3-tier-web-architecture-using-terraform
 Architecture with 3-tiers. With all resources provisioned. The website is tested for load balancing, and project outputs at the end on AWS  
 
-teh goal of project is to create a fully functional 3-tier web server with capability of auto scaling and load balancing. Below archtecture diagram shows the required provisoned resources and entities. 
+The goal of project is to create a fully functional 3-tier web server with capability of auto scaling and load balancing. Below archtecture diagram shows the required provisoned resources and entities. The output will show shows the hostname, and DNS of ALB will show load is being distributed between two instances. 
 
 ![image](https://github.com/fazalUllah-Khan/Design-a-full-e2e-3-tier-web-architecture-using-terraform/assets/148821704/749f4859-889e-4aee-823d-0ca65b33ebf4)
 
-At the our Terraform code will create resources like VPC, Internet Gateway,Public and Private Subnets, Route Table and Route associations, Security Groups for Application Load Balancer, Application Tier, Presentation Tier and Database Tier,EC2 Instances, Auto Scaling Groups, Application Load Balancer, RDS Instance as will be verifieid in AWS acoount. 
+As the our Terraform code will create resources like VPC, Internet Gateway,Public and Private Subnets, Route Table and Route associations, Security Groups for Application Load Balancer, Application Tier, Presentation Tier and Database Tier,EC2 Instances, Auto Scaling Groups, Application Load Balancer, RDS Instance as will be verifieid in AWS acoount. 
 
 First thing we will create an IAM user with attached policies in AWS and will install AWS plugins 
 
-Below snaps shows created IAM used and adding plugins to VScode i.e tools we will use for terraform code, test and deploy,.
+Below snaps shows created IAM user and adding plugins to VScode i.e tool we will use for terraform code, test and deploy,.
 
 ![image](https://github.com/fazalUllah-Khan/Design-a-full-e2e-3-tier-web-architecture-using-terraform/assets/148821704/ad7e7b26-25fa-446b-b940-9ea9c0dbaead)
 
@@ -20,12 +20,12 @@ Below snaps shows created IAM used and adding plugins to VScode i.e tools we wil
 Add teraform extensions to vscode
 ![image](https://github.com/fazalUllah-Khan/Design-a-full-e2e-3-tier-web-architecture-using-terraform/assets/148821704/618e5f11-dced-4a2a-93a6-d8c956782c5d)
 
-Below are important terraform commands to create the infrastructure on our AWS account,. Which we will running to test our code and in the end to create final resources in project. 
-* terraform init It initialize the working directory and downloads plugins of the provider
-* terraform fmt It formats our code to look clean and standard.
-* terraform plan It creates the execution plan of our code. Check each resource to confirm the exact resource is what you intend to provision. If there are errors, read out the error as terraform makes it easy to debug
-* terraform apply It creates the actual infrastructure
-* terraform destroy It destroys all the resources you provisioned on your AWS account
+Below are important terraform commands to create the infrastructure on our AWS account,. Which we will be running to test our code and in the end to create final resources in project. 
+* terraform init : It initialize the working directory and downloads plugins of the provider
+* terraform fmt: It formats our code to look clean and standard.
+* terraform plan:  It creates the execution plan of our code. Check each resource to confirm the exact resource is what you intend to provision. If there are errors, read out the error as terraform makes it easy to debug
+* terraform apply:  It creates the actual infrastructure
+* terraform destroy:  It destroys all the resources you provisioned on your AWS account
 
 # Step 1:
  Create provider.tf file to interact with AWS for resources creatation, choose prefered region.
